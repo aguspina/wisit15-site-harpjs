@@ -1,0 +1,99 @@
+<!DOCTYPE html><html><head><base href=".."><meta charset="UTF-8"><link rel="icon" href="/favicon_icon.ico" type="image/x-icon"><title>Wisit 15</title><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700"><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:600"><link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="assets/build/build.css"><link rel="stylesheet" href="handson/index.css"><script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-65138109-1', 'auto');
+ga('send', 'pageview');</script><script src="https://maps.googleapis.com/maps/api/js"></script><script type="text/javascript">function initialize() {
+  createMap({
+    lat: -34.706508,
+    lng: -58.2782888,
+    htmlElement: 'map-unq',
+    title: 'Universidad Nacional de Quilmes'
+  });
+
+  createMap({
+    lat: -34.5866187,
+    lng: -58.4044972,
+    htmlElement: 'map-fiuba',
+    title: 'Facultad de Ingeniería - UBA'
+  });
+
+}
+
+function createMap(props) {
+  var latlng = new google.maps.LatLng(props.lat, props.lng);
+  var mapCanvas = document.getElementById(props.htmlElement);
+  var mapOptions = {
+    zoom: 14,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+      title: props.title
+  });
+  console.log(mapCanvas);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script></head><body><nav class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#fixed-navbar-uqbar" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand"><img id="logo-wisit" src="assets/img/logoWISIT-Blanco.png"/></a></div><div id="fixed-navbar-uqbar" class="navbar-collapse collapse"><ul class="nav navbar-nav navbar-right"><li><a href="workshop">Workshop</a></li><li><a href="handson">Hands on</a></li><li><a href="propone">Proponé tu charla</a></li><li><a href="inscripcion">Inscripción</a></li><li><a href="sponsors">Sponsors</a></li></ul></div></div></nav><div class="container"><div class="titulo">Hands on</div><div class="row"> <div class="col-md-6 bajada"><p>En estos talleres, convocamos a expertos en tecnologías innovadoras para que nos guíen en los primeros pasos para aprovechar las nuevas tecnologías en el día a día de nuestro trabajo. </p><p>Acercate con tu notebook para venir a programar y tener una experiencia de primera mano construyendo software con estas herramientas.</p><ul class="talleres"><li><div class="donde">Universidad Nacional de Quilmes </div><div class="cuando">12 de septiembre - <a href="handson/index#unq">Más info</a></div></li><li><div class="donde">Facultad de Ingeniería UBA </div><div class="cuando">Fecha a definir - <a href="handson/index#uba">Más info</a></div></li></ul></div><div class="col-md-6"><img id="foto" src="assets/img/foto-talleres_360.jpg"></div></div><a name="unq"></a><div class="row taller"> <div class="col-xs-12"><h2 class="subtitulo">Universidad Nacional de Quilmes</h2></div><div class="col-xs-12 col-md-4 datos"><div class="recuadro center"> <span class="celeste">Próximamente </span><span>anunciaremos los talleres</span></div><div class="proximamente"><p class="cuando">Sábado 12 de Septiembre</p><p class="direccion">Roque Saenz Peña 352 <br> Bernal, Pcia. de Buenos Aires</p></div></div><div class="col-xs-12 col-md-8"><div id="map-unq" class="map center"></div></div></div><div class="row taller"> <div class="col-xs-12"><a name="uba"></a><h2 class="subtitulo">Facultad de Ingeniería - UBA</h2></div><div class="col-xs-12 col-md-4 datos"><div class="recuadro center"> <span class="celeste">Próximamente </span><span>anunciaremos los talleres</span></div><div class="proximamente"><p class="cuando">Fecha a definir</p><p class="direccion">Avenida Las Heras 2214, C.A.B.A </p></div></div><div class="col-xs-12 col-md-8"><div id="map-fiuba" class="map center"></div></div></div></div><footer><link rel="stylesheet" href="./social.css"/><div class="row row-eq-height social"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href="https://twitter.com/UqbarProject"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li><li><a href="http://facebook.com/uqbarproject"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></li><li><a href="https://plus.google.com/114074221227060701525?rel=author"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></span></a></li><li><a href="https://www.youtube.com/channel/UCcj9rZ9TeeJDnvcVA9cmYMw"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x fa-inverse"></i><div class="container"><br/><br/></div></span></a></li></ul></div></div></footer><script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-65138109-1', 'auto');
+ga('send', 'pageview');</script><script src="https://maps.googleapis.com/maps/api/js"></script><script type="text/javascript">function initialize() {
+  createMap({
+    lat: -34.706508,
+    lng: -58.2782888,
+    htmlElement: 'map-unq',
+    title: 'Universidad Nacional de Quilmes'
+  });
+
+  createMap({
+    lat: -34.5866187,
+    lng: -58.4044972,
+    htmlElement: 'map-fiuba',
+    title: 'Facultad de Ingeniería - UBA'
+  });
+
+}
+
+function createMap(props) {
+  var latlng = new google.maps.LatLng(props.lat, props.lng);
+  var mapCanvas = document.getElementById(props.htmlElement);
+  var mapOptions = {
+    zoom: 14,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+      title: props.title
+  });
+  console.log(mapCanvas);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script></body></html>
